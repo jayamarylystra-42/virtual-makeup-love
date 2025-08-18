@@ -358,6 +358,13 @@ if webrtc_ctx:
 # Simple "how to add secrets" help (visible to user)
 st.markdown("---")
 st.subheader("Add TURN server (optional, improves reliability behind strict firewalls)")
-st.markdown("""
-1. In Streamlit Cloud, open your app → Settings → Secrets.  
-2. Add keys:
+st.markdown(
+    "1. In Streamlit Cloud, open your app → **Settings → Secrets**.  \n"
+    "2. Add keys:\n\n"
+    "```\n"
+    "TURN_URL = \"turn:your.turn.server:3478\"\n"
+    "TURN_USER = \"USERNAME\"\n"
+    "TURN_PASS = \"PASSWORD\"\n"
+    "```\n"
+    "3. Save and **re-deploy** the app (or click 'Restart')."
+)
